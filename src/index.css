@@ -67,6 +67,22 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.containerEl{
+  display: flex;
+  flex-direction: column;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  /* color: red; */
+  /* background-color: red */
+}
+.landingDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

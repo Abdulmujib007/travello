@@ -5,11 +5,11 @@ import User from "./components/User";
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <Routes>
-        <Route path="/" element={<LandingPage/>}  ></Route>
-        <Route path="/login" element={<Login/>} ></Route>
-        <Route path='/user' element={<User/>} ></Route>
+        <Route path="/" element={<LandingPage/>}  />
+        <Route path="/login" element={<Login/>} />
+        <Route path='/user' element={<User/>} />
       </Routes>
     </div>
   );

@@ -5,7 +5,7 @@ const Body = () => {
 
   const heroSection = () => {
     return (
-      <div className="flex justify-center items-center py-20 pt-28 px-20 h-2/3 gap-24">
+      <div className="flex justify-center items-center mt-[1rem]  px-20  gap-24">
         <div className="flex flex-col gap-6">
           <p className="text-[3.25rem] font-semibold leading-[3.9rem]">
             Lets Explore <br></br>The Beauty Of <br></br> Dream world
@@ -310,10 +310,10 @@ const Body = () => {
           </section>
           <section className="p-8 border-2 border-tr-gray  flex  flex-col gap-8">
             <p>
-              "A customer testimonial that highlights <br></br> features and
+              A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
               <br></br> or service. Showcase testimonials from <br></br> a
-              similar demographic to your <br></br>customers."
+              similar demographic to your <br></br>customers.
             </p>
             <div className="flex gap-5">
               <img src="/img/Avatar Image3.png" alt="" />
@@ -366,7 +366,7 @@ const Body = () => {
   return (
     <div className="">
       {heroSection()}
-      <div className="flex  px-20 items-center justify-evenly pb-[4.4rem]">
+      <div className="flex  px-20 items-center justify-evenly ">
         <img src="/img/image 1.png" alt="" />
         <img src="/img/image 4.png" alt="" />
         <img src="/img/image 2.png" alt="" />

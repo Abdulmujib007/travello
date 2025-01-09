@@ -3,10 +3,12 @@ import Body from "./Body";
 import Footer from "./Footer";
 const LandingPage = () => {
   return (
-    <div>
+    <div className="landingDiv">
       <Navbar />
+      <main  className=" overflow-auto flex-grow ">
       <Body />
       <Footer />
+      </main>
     </div>
   );
 };

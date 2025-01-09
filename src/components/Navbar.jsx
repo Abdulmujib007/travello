@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
     const navigate = useNavigate()
   return (
-    <div className="fixed w-screen flex  px-16 py-4 justify-between items-center bg-white">
+    <div className="w-screen flex  px-16 py-4 justify-between items-center bg-white">
       <p className="font-medium text-base italic text-tr-orange">TRAVELLO</p>
       <div className="flex items-center gap-8 font-normal text-base text-graay">
         <p className="text-tr-orange">Home</p>
