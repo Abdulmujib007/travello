@@ -1,44 +1,47 @@
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { userLogin } from "../../request";
-import { useDispatch } from "react-redux";
-import { login } from "../../helper/appSlice";
-const Login = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate();
+import { Link, useNavigate } from "react-router-dom";
+import { addNewUser } from "../../request";
+
+const Signup = () => {
   const [password, setShowPassword] = useState(true);
-  const [loginValue, setLoginValues] = useState({ email: "", password: "" });
+  const [signupValue, setSignupValues] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
   };
-  const emailChange = (e) =>
-    setLoginValues({ ...loginValue, email: e.target.value });
-  const passwordChange = (e) =>
-    setLoginValues({ ...loginValue, password: e.target.value });
+  const navigate = useNavigate();
 
+  // signup function 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("button clicked");
+    console.log('clicked button')
     try {
-      const data = await userLogin(loginValue);
+      const data = await addNewUser({
+        ...signupValue,
+        firstName: "random",
+        lastName: "randomly",
+      });
       if (data) {
-        dispatch(login());
-        // localStorage.setItem('isLoggedIn',JSON.stringify(true))  const { isLoggedIn } = useSelector((state) => state.appAuth);
-
-        navigate("/user");
+        setMessage("Account Created,Will be redirected to login page in sec");
+        setTimeout(() => {
+          navigate("/login");
+        }, 3000);
       }
     } catch (err) {
-      setMessage(err.response.data.message)
-      console.log(err,);
-    } finally{
+      if(err.response.data) setMessage(err.response.data.message)
+      console.log(err, err.message);
+    } finally {
       setTimeout(() => {
         setMessage('')
       },3000)
+      setSignupValues({ email: "", password: "" });
     }
-    setLoginValues({email:'',password:''})
   };
+  const emailChange = (e) =>
+    setSignupValues({ ...signupValue, email: e.target.value });
+  const passwordChange = (e) =>
+    setSignupValues({ ...signupValue, password: e.target.value });
 
   return (
     <div className="flex  justify-center gap-36  h-screen w-screen py-7">
@@ -46,7 +49,8 @@ const Login = () => {
         <img className="h-[35rem]" src="/img/Login image.png" alt="" />
       </div>
       <div className="flex flex-col gap-1  ">
-        <p className="m-auto text-tr-gray" >{message}</p>
+        <p className="m-auto text-tr-orange">{message}</p>
+
         <p className="text-tr-orange pb-12 text-center text-3xl font-light italic">
           TRAVELLO
         </p>
@@ -65,7 +69,7 @@ const Login = () => {
             <input
               className=" text-base w-full outline-none "
               type="email"
-              value={loginValue.email}
+              value={signupValue.email}
               onChange={emailChange}
               placeholder="Email"
               required
@@ -75,8 +79,9 @@ const Login = () => {
             <input
               className=" text-base w-[90%] outline-none "
               type={password ? "password" : "text"}
-              value={loginValue.password}
+              value={signupValue.password}
               onChange={passwordChange}
+              //   hidden={password}
               placeholder="Password"
               required
             />
@@ -95,23 +100,15 @@ const Login = () => {
               />
             )}
           </div>
-          <section className="flex justify-between items-center text-xs">
-            <div className="flex gap-2 items-center">
-              <label className="switch">
-                <input className="slide" type="checkbox" />
-                <span className="slider round"></span>
-              </label>
-              <span>Remember Me</span>
-            </div>
-            <p className="text-xs">Forgot Password?</p>
-          </section>
           <button className="bg-tr-orange text-white text-xl font-medium py-2 rounded-[5px] mt-8">
-            Login
+            Signup
           </button>
           <p className="text-center pt-6">
-            <span className="text-sm font-normal">Dont have an account?</span>
-            <Link to={"/signup"} className="text-sm font-bold text-tr-orange ">
-              Sign up!
+            <span className="text-sm font-normal">
+              Have an Account Already?
+            </span>
+            <Link to={"/login"} className="text-sm font-bold text-tr-orange ">
+              Login!
             </Link>
           </p>
         </form>
@@ -119,4 +116,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Signup;

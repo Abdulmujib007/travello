@@ -269,10 +269,10 @@ const Body = () => {
         <div className=" px-20 py-10 flex justify-center gap-5">
           <section className="p-8  border-2 border-tr-gray flex  flex-col gap-8">
             <p>
-              "A customer testimonial that highlights <br></br> features and
+              A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
               <br></br> or service. Showcase testimonials from <br></br> a
-              similar demographic to your <br></br>customers."
+              similar demographic to your <br></br>customers.
             </p>
             <div className="flex gap-4">
               <img src="/img/Avatar Image.png" alt="" />
@@ -290,10 +290,10 @@ const Body = () => {
           </section>
           <section className="p-8   border-2 border-tr-gray flex  flex-col gap-8">
             <p>
-              "A customer testimonial that highlights <br></br> features and
+              A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
               <br></br> or service. Showcase testimonials from <br></br> a
-              similar demographic to your <br></br>customers."
+              similar demographic to your <br></br>customers.
             </p>
             <div className="flex gap-4">
               <img src="/img/Avatar Image2.png" alt="" />
@@ -349,7 +349,7 @@ const Body = () => {
       <div className="px-[4.5rem] pb-8 pt-0">
         <div className="px-64 py-20 bg-tr-orange flex flex-col gap-6 justify-center items-center rounded-md">
           <p className="text-white font-semibold text-5xl text-center">
-            Prepare yourself & let's explore <br></br>the beauty of the dream
+            Prepare yourself & lets explore <br></br>the beauty of the dream
             world
           </p>
           <p className="text-lg text-white">

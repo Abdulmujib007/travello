@@ -1,55 +1,14 @@
-import { useNavigate} from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import NavBar2 from "./NavBar2";
+// import { useState } from "react";
+
+
 
 const User = () => {
-  const navigate = useNavigate()
-  const navBar = () => {
-    const style = {
-      boxShadow: "0px 6px 10px 0px #57575726",
-    };
-    return (
-      <nav className="">
-        <div className="  bg-white px-36 py-8 border-b-[1px] border-[#EFEFEF] flex justify-between  w-screen">
-          <p className="italic text-tr-orange text-[1.2rem]">TRAVELLO</p>
-          <section className="flex gap-40">
-            <div className="flex gap-10 font-semibold text-xl">
-              <span>Home</span>
-              <span>About us</span>
-              <span>Tour Packages</span>
-              <span>Contact us</span>
-            </div>
-
-            <section className="flex gap-5 items-center">
-              <div className="flex">
-                <p className="text-[#333333] font-semibold text-lg">Eng</p>
-                <img src="/img/Chevron Down.png" alt="" />
-              </div>
-              <img className="h-10" src="/img/Ellipse 8.png" alt="" />
-            </section>
-          </section>
-        </div>
-
-        <section className="w-full flex justify-end pr-20">
-          <div
-            style={style}
-            className=" bg-white  flex flex-col items-start justify-center    border-[1px] border-[#EFEFEF]   text-tr-white rounded-b-3xl w-fit "
-          >
-            <section className="w-full flex pb-3 border-b-[1px] border-b-[#EFEFEF] pr-14 pl-[14px] pt-[14px] gap-3">
-              <img className="h-5" src="/img/icon_ticket.png" alt="" />
-              <p className="text-lg">My Tickets</p>
-            </section>
-            <button onClick={()=> navigate('/')}  className="flex px-[14px] py-[14px] gap-3 ">
-              <img src="/img/clarity_logout-line.png" alt="" />
-              <p className="text-lg">Logout</p>
-            </button>
-          </div>
-        </section>
-      </nav>
-    );
-  };
   const body = () => {
     return (
-      <div className="px-36">
+      <div className="px-36 mt-10">
         <p className="font-extrabold text-[2rem] font-sans pb-9">My Tickets</p>
         <div className=" py-5 border-[1px] border-[#EFEFEF] rounded-3xl flex flex-col">
           <section className=" mb-10 px-8 flex justify-between text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
@@ -152,7 +111,7 @@ const User = () => {
 
   return (
     <div className="containerEl ">
-      {navBar()}
+      <NavBar2/>
       <main className="flex flex-col flex-grow overflow-auto">
         {body()}
         <Footer />
