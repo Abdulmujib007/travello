@@ -1,11 +1,20 @@
 // import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "./Footer";
 import NavBar2 from "./NavBar2";
 // import { useState } from "react";
-
-
+import toast, { Toaster } from "react-hot-toast";
 
 const User = () => {
+  useEffect(() => {
+      const alreadyLoaded = JSON.parse( localStorage.getItem('first-loaded'))
+      if(!alreadyLoaded){
+        toast("Welcome to Travello User Page");
+        localStorage.setItem('first-loaded',JSON.stringify(true))
+      }
+
+  }, []);
+
   const body = () => {
     return (
       <div className="px-36 mt-10">
@@ -111,11 +120,17 @@ const User = () => {
 
   return (
     <div className="containerEl ">
-      <NavBar2/>
+      <NavBar2 />
       <main className="flex flex-col flex-grow overflow-auto">
         {body()}
         <Footer />
       </main>
+      <Toaster
+        toastOptions={{
+          style: { backgroundColor: "orange", color: "white" },
+          duration: 2000,
+        }}
+      />
     </div>
   );
 };

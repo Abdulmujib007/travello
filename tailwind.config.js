@@ -16,6 +16,10 @@ export default {
         'tr-white': '#333333'
       }
     },
+    screens:{
+      laptop:'800px',
+      mobile:'320px'
+    }
   },
   plugins: [],
 }

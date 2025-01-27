@@ -7,6 +7,7 @@ const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const [password, setShowPassword] = useState(true);
+  const [isLoading,setIsLoading] = useState(false)
   const [loginValue, setLoginValues] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
 
@@ -21,12 +22,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("button clicked");
+    setIsLoading(true)
     try {
       const data = await userLogin(loginValue);
       if (data) {
         dispatch(login());
-        // localStorage.setItem('isLoggedIn',JSON.stringify(true))  const { isLoggedIn } = useSelector((state) => state.appAuth);
-
+    
         navigate("/user");
       }
     } catch (err) {
@@ -38,6 +39,7 @@ const Login = () => {
       },3000)
     }
     setLoginValues({email:'',password:''})
+    setIsLoading(false)
   };
 
   return (
@@ -105,8 +107,10 @@ const Login = () => {
             </div>
             <p className="text-xs">Forgot Password?</p>
           </section>
-          <button className="bg-tr-orange text-white text-xl font-medium py-2 rounded-[5px] mt-8">
-            Login
+          <button className="bg-tr-orange text-white text-xl font-medium py-2 rounded-[5px] mt-8 hover:bg-orange-500 ">
+            {
+              isLoading ? 'Loading...' : 'Login'
+            }
           </button>
           <p className="text-center pt-6">
             <span className="text-sm font-normal">Dont have an account?</span>

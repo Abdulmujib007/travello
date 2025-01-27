@@ -10,7 +10,7 @@ const NavBar2 = () => {
 
   const handleLogout = () => {
     dispatch(logout())
-    // localStorage.clear();
+    localStorage.setItem('first-loaded',JSON.stringify(false))
       navigate("/home");
    
   };
@@ -22,8 +22,8 @@ const NavBar2 = () => {
     <nav className="">
       <div className="  bg-white px-36 py-8 border-b-[1px] border-[#EFEFEF] flex justify-between  w-screen">
         <p className="italic text-tr-orange text-[1.2rem]">TRAVELLO</p>
-        <section className="flex gap-40">
-          <div className="flex gap-28 font-semibold text-xl">
+        <section className="flex gap-16">
+          <div className="flex gap-12 font-semibold text-xl">
             <Link to={"/about"}>About </Link>
             <Link to={"/pricing"}>Pricing</Link>
             <Link to={"/user"} className="text-tr-orange">
@@ -31,7 +31,7 @@ const NavBar2 = () => {
             </Link>
           </div>
 
-          <section className="flex gap-5 items-center">
+          <section className="flex  items-center">
             {/* <div className="flex"> */}
             {/* <p className="text-[#333333] font-semibold text-lg">Eng</p> */}
             {/* <img src="/img/Chevron Down.png" alt="" /> */}
