@@ -44,15 +44,15 @@ const Login = () => {
 
   return (
     <div className="flex  justify-center gap-36  h-screen w-screen py-7">
-      <div className="h-full">
+      <div className="h-full hidden laptop:block">
         <img className="h-[35rem]" src="/img/Login image.png" alt="" />
       </div>
-      <div className="flex flex-col gap-1  ">
+      <div className="flex flex-col gap-1 px-5 laptop:px-0 ">
         <p className="m-auto text-tr-gray" >{message}</p>
         <p className="text-tr-orange pb-12 text-center text-3xl font-light italic">
           TRAVELLO
         </p>
-        <p className="text-center text-[2.5rem] leading-10 pb-5">
+        <p className="text-center text-[2rem]  laptop:text-[2.5rem] leading-10 pb-5">
           Dont just imagine paradise, <br></br> Experience it!
         </p>
         <p className="text-center font-light text-lg pb-3">

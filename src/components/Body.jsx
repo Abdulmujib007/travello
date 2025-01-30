@@ -5,12 +5,12 @@ const Body = () => {
 
   const heroSection = () => {
     return (
-      <div className="flex justify-center items-center mt-[1rem] px-5 laptop:px-20 laptop:gap-24 gap-5 flex-col laptop:flex-row ">
+      <div className="flex justify-between items-center mt-[1rem] px-5 laptop:px-20 laptop:gap-0 gap-5 flex-col laptop:flex-row ">
         <div className="flex flex-col gap-6">
           <p className="laptop:text-[3.25rem] text-4xl font-semibold laptop:leading-[3.9rem]">
             Lets Explore <br></br>The Beauty Of <br></br> Dream world
           </p>
-          <p className="text-tr-tr-grayWhite text-lg font-normal pl-1">
+          <p className="text-tr-grayWhite laptop:text-lg font-normal pl-1">
             We always out customer happy by providing as many chises <br></br>
             as possible we always our customer happy by providing as <br></br>
             many possible by providing as many chises as
@@ -266,8 +266,8 @@ const Body = () => {
           Creating a visual identity for your company, and an <br></br> overall
           brand
         </p>
-        <div className="px-20 py-10 flex justify-center gap-5 flex-col laptop:flex-row">
-          <section className=" relative p-8  border-2 border-tr-gray flex  flex-col gap-8">
+        <div className="px-20 py-10 flex justify-center items-center  gap-5 flex-col laptop:flex-row">
+          <section className=" relative p-8  border-2 border-tr-gray flex  flex-col gap-8   w-fit ">
             <p>
               A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
@@ -290,7 +290,7 @@ const Body = () => {
               <img className="" src="/img/Arrow left" alt="" />
             </div>
           </section>
-          <section className="p-8   border-2 border-tr-gray flex  flex-col gap-8">
+          <section className="p-8  w-fit  border-2 border-tr-gray flex  flex-col gap-8">
             <p>
               A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
@@ -310,7 +310,7 @@ const Body = () => {
               </p>
             </div>
           </section>
-          <section className="relative  p-8 border-2 border-tr-gray  flex  flex-col gap-8">
+          <section className="relative w-fit p-8 border-2 border-tr-gray  flex  flex-col gap-8">
             <p>
               A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
