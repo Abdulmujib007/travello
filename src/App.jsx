@@ -10,27 +10,15 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useSelector } from "react-redux";
 const App = () => {
   const { isLoggedIn } = useSelector((state) => state.appAuth);
-  console.log(isLoggedIn)
-  // const currentRoute = useLocation().pathname
-  // console.log(currentRoute)
-  // const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+  console.log(isLoggedIn);
+  
   return (
     <div className="">
       <Routes>
         {/* unauthorized route */}
         {!isLoggedIn && (
           <>
-            <Route
-              // shouldRevalidate={true}
-              path={"/home"}
-              element={
-                // isLoggedIn === true ? (
-                //   <Navigate to={"/user"} />
-                // ) : (
-                <LandingPage />
-                // )
-              }
-            />
+            <Route path={"/home"} element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<LandingPage />} />
@@ -39,10 +27,6 @@ const App = () => {
 
         {/* protected route */}
         <Route element={<ProtectedRoute />}>
-          {/* <Route path="/login" element={<Navigate to={"/"} />} />
-          <Route path="/signup" element={<Navigate to={"/"} />} />
-          <Route path="/home" element={<Navigate to={"/"} />} /> */}
-
           <Route path="/" element={<Navigate to={"/user"} />} />
           <Route path="/user" element={<User />} />
           <Route path="/about" element={<About />} />

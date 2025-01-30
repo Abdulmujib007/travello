@@ -5,9 +5,9 @@ const Body = () => {
 
   const heroSection = () => {
     return (
-      <div className="flex justify-center items-center mt-[1rem]  px-20  gap-24">
+      <div className="flex justify-center items-center mt-[1rem] px-5 laptop:px-20 laptop:gap-24 gap-5 flex-col laptop:flex-row ">
         <div className="flex flex-col gap-6">
-          <p className="text-[3.25rem] font-semibold leading-[3.9rem]">
+          <p className="laptop:text-[3.25rem] text-4xl font-semibold laptop:leading-[3.9rem]">
             Lets Explore <br></br>The Beauty Of <br></br> Dream world
           </p>
           <p className="text-tr-tr-grayWhite text-lg font-normal pl-1">
@@ -17,7 +17,7 @@ const Body = () => {
           </p>
           <section
             style={style}
-            className="flex  rounded-md px-8 py-3 justify-center items-center gap-5 text-[0.75rem] text-tr-grayWhite"
+            className="flex rounded-md laptop:px-8 px-4 py-3 justify-center items-center gap-2 laptop:gap-5 text-[0.75rem] text-tr-grayWhite"
           >
             <div className="flex flex-col gap-3 w-20">
               <p className="flex items-center gap-1">
@@ -60,14 +60,14 @@ const Body = () => {
       <div className="text-center">
         <p className="text-tr-orange font-normal text-lg">BEST PACKAGE</p>
         <p className="pt-6 font-semibold text-3xl">Our Best Packages For You</p>
-        <div className="flex justify-center pt-10 gap-20 text-anotherGray text-xl font-medium">
+        <div className="flex justify-between pt-10  text-anotherGray font-medium laptop:px-40 px-8 text-base laptop:text-xl ">
           <span className="text-tr-orange">Hot Details</span>
           <span>Back Pack</span>
           <span>Asia</span>
           <span>Europe</span>
           <span>More</span>
         </div>
-        <section className="pt-8 pb-20 flex gap-6  justify-evenly px-[6rem]">
+        <section className="pt-8 pb-20 flex flex-col laptop:flex-row justify-between px-5 laptop:px-20 gap-5">
           <div className=" flex flex-col gap-4">
             <img src="/img/Rectangle 3.png" alt="" />
             <p className="flex justify-between text-base">
@@ -137,8 +137,8 @@ const Body = () => {
   };
   const experinceSection = () => {
     return (
-      <div className="bg-tr-pink flex gap-20">
-        <div className="py-28 px-16 flex flex-col gap-5">
+      <div className="bg-tr-pink flex flex-col laptop:flex-row  justify-between">
+        <div className="py-28 px-5 laptop:px-16 flex flex-col gap-5">
           <p className="text-tr-orange text-lg font-normal">OUR EXPERIENCE</p>
           <p className="text-[2.7rem] leading-tight font-bold">
             With Our Experience <br></br> We Will Service You{" "}
@@ -174,16 +174,16 @@ const Body = () => {
             </section>
           </div>
         </div>
-        <img className="py-7" src="/img/experience" alt="" />
+        <img className="py-7 px-5 laptop:px-0" src="/img/experience" alt="" />
       </div>
     );
   };
   const destinationSection = () => {
     return (
-      <div className="py-[4.5rem] px-16">
+      <div className="laptop:py-[4.5rem] py-0 px-5 laptop:px-16">
         <p className="pt-8 text-lg text-tr-orange pb-4">DESTINATION</p>
         <section className="flex flex-col gap-7">
-          <p className="text-5xl font-bold">
+          <p className="laptop:text-5xl text-4xl font-bold">
             Our Best Destination <br></br> For You
           </p>
           <p className="font-medium text-lg">
@@ -193,8 +193,8 @@ const Body = () => {
             <br></br> list of the best places to vist
           </p>
         </section>
-        <section className="flex gap-8">
-          <div className="py-8 flex flex-col gap-6">
+        <section className="flex flex-col laptop:flex-row justify-between laptop:gap-5 gap-10">
+          <div className="laptop:py-8 pt-5 flex flex-col gap-6">
             <img src="/img/destination1" alt="" />
             <section className="flex flex-col pl-6 gap-3">
               <div className="flex items-center gap-4 ">
@@ -213,7 +213,7 @@ const Body = () => {
               </p>
             </section>
           </div>
-          <div className="py-8 flex flex-col gap-6">
+          <div className="laptop:py-8 flex flex-col gap-6">
             <img src="/img/destinattion" alt="" />
             <section className="flex flex-col pl-6 gap-3">
               <div className="flex items-center gap-4 ">
@@ -232,7 +232,7 @@ const Body = () => {
               </p>
             </section>
           </div>
-          <div className="py-8 flex flex-col gap-6">
+          <div className="laptop:py-8 flex flex-col gap-6">
             <img src="/img/destination2" alt="" />
             <section className="flex flex-col pl-6 gap-3">
               <div className="flex items-center gap-4 ">
@@ -257,7 +257,7 @@ const Body = () => {
   };
   const testimonialSection = () => {
     return (
-      <div className="py-[4.5rem]">
+      <div className="laptop:py-[4.5rem] py-[2rem]">
         <p className="text-tr-orange text-lg text-center pt-8">TESTIMONIAL</p>
         <p className="text-center font-bold text-5xl pt-10">
           What Our Client Say{" "}
@@ -266,8 +266,8 @@ const Body = () => {
           Creating a visual identity for your company, and an <br></br> overall
           brand
         </p>
-        <div className=" px-20 py-10 flex justify-center gap-5">
-          <section className="p-8  border-2 border-tr-gray flex  flex-col gap-8">
+        <div className="px-20 py-10 flex justify-center gap-5 flex-col laptop:flex-row">
+          <section className=" relative p-8  border-2 border-tr-gray flex  flex-col gap-8">
             <p>
               A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
@@ -286,7 +286,9 @@ const Body = () => {
                 </span>
               </p>
             </div>
-            
+            <div className=" hidden laptop:block bg-white absolute w-fit top-[8rem] left-[-1.5rem] rounded-full border-2 border-tr-orange p-3">
+              <img className="" src="/img/Arrow left" alt="" />
+            </div>
           </section>
           <section className="p-8   border-2 border-tr-gray flex  flex-col gap-8">
             <p>
@@ -308,7 +310,7 @@ const Body = () => {
               </p>
             </div>
           </section>
-          <section className="p-8 border-2 border-tr-gray  flex  flex-col gap-8">
+          <section className="relative  p-8 border-2 border-tr-gray  flex  flex-col gap-8">
             <p>
               A customer testimonial that highlights <br></br> features and
               answers potential <br></br> customer doubts about your product{" "}
@@ -327,28 +329,23 @@ const Body = () => {
                 </span>
               </p>
             </div>
-            
+            <div className=" hidden laptop:block bg-white absolute top-[8rem] right-[-1.5rem] w-fit rounded-full border-2 border-tr-orange p-3">
+              <img className="" src="/img/Arrow right" alt="" />
+            </div>
           </section>
         </div>
         <div className="flex justify-center pt-8">
           <img src="/img/Slider Dots.png" alt="" />
         </div>
-        <div className="flex">
-          <div className=" bg-white relative w-fit top-[-15rem] left-[9.7rem] rounded-full border-2 border-tr-orange p-3">
-            <img className="" src="/img/Arrow left" alt="" />
-          </div>
-          <div className=" bg-white relative top-[-15rem] left-[69rem] w-fit rounded-full border-2 border-tr-orange p-3">
-            <img className="" src="/img/Arrow right" alt="" />
-          </div>
-        </div>
+        {/* <div className="flex"></div> */}
       </div>
     );
   };
   const offerSection = () => {
     return (
-      <div className="px-[4.5rem] pb-8 pt-0">
-        <div className="px-64 py-20 bg-tr-orange flex flex-col gap-6 justify-center items-center rounded-md">
-          <p className="text-white font-semibold text-5xl text-center">
+      <div className="laptop:px-[4.5rem] px-5 laptop:pb-8 mb-3 pt-0">
+        <div className="laptop:py-20 py-10 bg-tr-orange flex flex-col gap-6 justify-center items-center rounded-md">
+          <p className="text-white laptop:font-semibold font-semibold laptop:text-5xl text-lg text-center">
             Prepare yourself & lets explore <br></br>the beauty of the dream
             world
           </p>
@@ -366,11 +363,11 @@ const Body = () => {
   return (
     <div className="">
       {heroSection()}
-      <div className="flex  px-20 items-center justify-evenly ">
-        <img src="/img/image 1.png" alt="" />
-        <img src="/img/image 4.png" alt="" />
-        <img src="/img/image 2.png" alt="" />
-        <img src="/img/image 3.png" alt="" />
+      <div className="flex   px-5 items-center justify-evenly w-full laptop:mt-0 mt-10 laptop:mb-0 mb-5  ">
+        <img className="w-20 laptop:w-fit" src="/img/image 1.png" alt="" />
+        <img className="w-20 laptop:w-fit" src="/img/image 4.png" alt="" />
+        <img className="w-20 laptop:w-fit" src="/img/image 2.png" alt="" />
+        <img className="w-20 laptop:w-fit" src="/img/image 3.png" alt="" />
       </div>
       {packageSection()}
       {experinceSection()}
