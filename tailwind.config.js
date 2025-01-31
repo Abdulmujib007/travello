@@ -17,8 +17,10 @@ export default {
       }
     },
     screens:{
-      laptop:'800px',
-      mobile:'320px'
+      laptop:'850px',
+      mobile:'320px',
+      largerScreen:'1240px'
+    
     }
   },
   plugins: [],
