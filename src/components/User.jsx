@@ -125,9 +125,11 @@ const User = () => {
         {body()}
         <Footer />
       </main>
-      <Toaster
+      <Toaster 
         toastOptions={{
-          style: { backgroundColor: "orange", color: "white" },
+          style: { backgroundColor: "orange", color: "white",
+          marginTop:100
+           },
           duration: 2000,
         }}
       />
