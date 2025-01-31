@@ -43,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex  justify-center gap-36  h-screen w-screen py-7">
+    <div className="flex  justify-center gap-36  h-screen w-screen laptop:py-7 py-2">
       <div className="h-full hidden laptop:block">
         <img className="h-[35rem]" src="/img/Login image.png" alt="" />
       </div>

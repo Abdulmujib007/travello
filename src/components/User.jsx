@@ -49,7 +49,7 @@ const User = () => {
             <div className="flex  items-center  gap-5 largerScreen:gap-28 laptop:gap-4">
               <p className="flex laptop:flex-row flex-col gap-1 laptop:gap-2 items-center font-semibold laptop:text-base text-xs laptop:mr-24 mr-10 ">
                 <img className="laptop:w-fit w-5" src="/img/PayPal.png" alt="" />
-                <span className="text-tr-white">Paypal</span>
+                <span className="text-tr-white font-normal">Paypal</span>
               </p>
               <p className="text-tr-white laptop:text-base text-xs">$86.00</p>
               <p className="flex laptop:gap-2 gap-1 items-center  laptop:flex-row flex-col ">
@@ -84,7 +84,7 @@ const User = () => {
             <div className="flex items-center  largerScreen:gap-[8.5rem] laptop:gap-10 gap-10">
               <p className="flex laptop:gap-2 gap-1 flex-col laptop:flex-row items-center laptop:font-semibold laptop:text-base text-xs laptop:mr-10 mr-3 ">
                 <img className="laptop:w-fit w-5" src="/img/Visa.png" alt="" />
-                <span className="text-tr-white font-semibold">Credit Card</span>
+                <span className="text-tr-white largerScreen:font-semibold font-normal ">Credit Card</span>
               </p>
               <p className="text-tr-white laptop:text-base text-xs">$86.00</p>
               <p className="flex gap-1 laptop:flex-row flex-col laptop:gap-2 items-center">
@@ -130,7 +130,7 @@ const User = () => {
           style: {
             backgroundColor: "#FE8C00",
             color: "#FFFFFF",
-            marginTop: "100px",
+            marginTop: "25px",
             padding: "16px",
             fontSize: "16px",
             borderRadius: "10px",
