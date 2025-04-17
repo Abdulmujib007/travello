@@ -6,7 +6,6 @@ import About from "./components/About";
 import Pricing from "./components/Pricing";
 import Signup from "./components/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
-// import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 const App = () => {
   const { isLoggedIn } = useSelector((state) => state.appAuth);

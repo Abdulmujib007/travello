@@ -45,10 +45,10 @@ const Login = () => {
   return (
     <div className="flex  justify-center gap-36  h-screen w-screen laptop:py-7 py-2">
       <div className="h-full hidden laptop:block">
-        <img className="h-[35rem]" src="/img/Login image.png" alt="" />
+        <img className="h-full" src="/img/Login image.png" alt="" />
       </div>
-      <div className="flex flex-col gap-1 px-5 laptop:px-0 ">
-        <p className="m-auto text-tr-gray" >{message}</p>
+      <div className="flex flex-col justify-center  gap-1 px-5 laptop:px-0 ">
+        <p className="mx-auto text-tr-gray" >{message}</p>
         <p className="text-tr-orange pb-12 text-center text-3xl font-light italic">
           TRAVELLO
         </p>
@@ -120,6 +120,7 @@ const Login = () => {
           </p>
         </form>
       </div>
+      
     </div>
   );
 };

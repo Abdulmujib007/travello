@@ -46,10 +46,10 @@ const Signup = () => {
   return (
     <div className="flex  justify-center gap-36  h-screen w-screen py-7">
       <div className="h-full hidden laptop:block  " >
-        <img className="h-[35rem]" src="/img/Login image.png" alt="" />
+        <img className="h-full" src="/img/Login image.png" alt="" />
       </div>
-      <div className="flex flex-col gap-1 px-5 laptop:px-0  ">
-        <p className="m-auto text-tr-orange">{message}</p>
+      <div className="flex flex-col justify-center gap-1 px-5 laptop:px-0  ">
+        <p className="mx-auto  text-tr-orange">{message}</p>
 
         <p className="text-tr-orange pb-12 text-center text-3xl font-light italic">
           TRAVELLO
