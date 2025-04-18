@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="bg-[#333333] py-10 px-4 largerScreen:px-[17rem] laptop:mt-[3rem] mt-4 ">
+    <div className="bg-[#333333] py-10 px-4 largerScreen:px-[17rem]">
       <header className="font-normal laptop:font-medium text-base italic text-tr-orange">
         TRAVELLO
       </header>

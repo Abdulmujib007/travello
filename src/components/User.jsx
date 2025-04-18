@@ -16,7 +16,7 @@ const User = () => {
 
   const body = () => {
     return (
-      <div className=" px-5 laptop:px-36 laptop:mt-10 mt-3 ">
+      <div className=" px-5 laptop:px-36 laptop:mt-10 mt-3 mb-4 ">
         <p className=" font-semibold laptop:font-extrabold laptop:text-[2rem] font-sans laptop:pb-9 pb-3 ">My Tickets</p>
         <div className="py-5  border-[1px] border-[#EFEFEF] rounded-3xl flex flex-col">
           <section className=" laptop:mb-10 mb-2 px-3 laptop:px-8 flex gap-10 justify-between text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
@@ -121,7 +121,7 @@ const User = () => {
   return (
     <div className="containerEl">
       <NavBar2 />
-      <main className="flex flex-col flex-grow overflow-auto">
+      <main className="flex flex-col flex-grow overflow-auto ">
         {body()}
         <Footer />
       </main>

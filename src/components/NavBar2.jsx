@@ -40,11 +40,11 @@ const NavBar2 = () => {
         </Link>
         <Link
           className={` ${
-            pathname === "/pricing" ? "text-tr-orange" : "text-black"
+            pathname === "/contact" ? "text-tr-orange" : "text-black"
           } hover:text-tr-orange w-fit `}
           to={"/contact"}
         >
-          Contact Us
+          Contact us
         </Link>
         <Link
           to={"/user"}
@@ -69,10 +69,7 @@ const NavBar2 = () => {
             </div>
 
             <section className="flex  items-center">
-              {/* <div className="flex"> */}
-              {/* <p className="text-[#333333] font-semibold text-lg">Eng</p> */}
-              {/* <img src="/img/Chevron Down.png" alt="" /> */}
-              {/* </div> */}
+            
               <img
                 onClick={toggleProfileVisibility}
                 className="h-10"

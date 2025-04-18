@@ -1,18 +1,41 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useLocation} from "react-router-dom";
 
 const NavLinks = () => {
+  const {pathname} = useLocation()
   return (
     <>
-      <Link to={"/home"} className="text-tr-orange">
+      <Link
+        to={"/home"}
+        className={` ${
+          pathname === "/home" ? "text-tr-orange" : "text-black"
+        } hover:text-tr-orange w-fit `}
+      >
         Home
       </Link>
-      <Link to={"/about"}>About</Link>
-      <Link to={"/user"} className="flex gap-1">
+      <Link
+        to={"/about"}
+        className={` ${
+          pathname === "/about" ? "text-tr-orange" : "text-black"
+        } hover:text-tr-orange w-fit `}
+      >
+        About
+      </Link>
+      <Link
+        to={"/user"}
+        className={` ${
+          pathname === "/user" ? "text-tr-orange" : "text-black"
+        } hover:text-tr-orange w-fit flex gap-1 `}
+      >
         <span>Services</span>
         {/* <img className="h-6" src="/img/Chevron Down.png" alt="" /> */}
       </Link>
-      <Link to={"/contact"} className="flex gap-1">
+      <Link
+        to={"/contact"}
+        className={` ${
+          pathname === "/contact" ? "text-tr-orange" : "text-black"
+        } hover:text-tr-orange w-fit flex gap-1 `}
+      >
         <span>Contact us</span>
         {/* <img className="h-6" src="/img/Chevron Down.png" alt="" /> */}
       </Link>
