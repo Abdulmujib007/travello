@@ -14,7 +14,7 @@ const NavLinks = () => {
         Home
       </Link>
       <Link
-        to={"/about"}
+        to={"/login"}
         className={` ${
           pathname === "/about" ? "text-tr-orange" : "text-black"
         } hover:text-tr-orange w-fit `}
@@ -22,7 +22,7 @@ const NavLinks = () => {
         About
       </Link>
       <Link
-        to={"/user"}
+        to={"/login"}
         className={` ${
           pathname === "/user" ? "text-tr-orange" : "text-black"
         } hover:text-tr-orange w-fit flex gap-1 `}
@@ -31,7 +31,7 @@ const NavLinks = () => {
         {/* <img className="h-6" src="/img/Chevron Down.png" alt="" /> */}
       </Link>
       <Link
-        to={"/contact"}
+        to={"/login"}
         className={` ${
           pathname === "/contact" ? "text-tr-orange" : "text-black"
         } hover:text-tr-orange w-fit flex gap-1 `}
