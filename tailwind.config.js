@@ -19,7 +19,8 @@ export default {
     screens:{
       laptop:'850px',
       mobile:'320px',
-      largerScreen:'1240px'
+      // mediumScreen:'1100px',
+      largerScreen:'1240px',
     
     }
   },

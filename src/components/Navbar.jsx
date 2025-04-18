@@ -12,8 +12,8 @@ const NavLinks = () => {
         <span>Services</span>
         {/* <img className="h-6" src="/img/Chevron Down.png" alt="" /> */}
       </Link>
-      <Link to={"/pricing"} className="flex gap-1">
-        <span>Pricing</span>
+      <Link to={"/contact"} className="flex gap-1">
+        <span>Contact us</span>
         {/* <img className="h-6" src="/img/Chevron Down.png" alt="" /> */}
       </Link>
     </>

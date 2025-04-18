@@ -42,9 +42,9 @@ const NavBar2 = () => {
           className={` ${
             pathname === "/pricing" ? "text-tr-orange" : "text-black"
           } hover:text-tr-orange w-fit `}
-          to={"/pricing"}
+          to={"/contact"}
         >
-          Pricing
+          Contact Us
         </Link>
         <Link
           to={"/user"}

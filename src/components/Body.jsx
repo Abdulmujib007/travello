@@ -344,7 +344,7 @@ const Body = () => {
   const offerSection = () => {
     return (
       <div className="laptop:px-[4.5rem] px-5 laptop:pb-8 mb-3 pt-0">
-        <div className="laptop:py-20 py-10 bg-tr-orange flex flex-col gap-6 justify-center items-center rounded-md">
+        <div className="laptop:py-20 py-10 bg-[#333333] flex flex-col gap-6 justify-center items-center rounded-md">
           <p className="text-white laptop:font-semibold font-semibold laptop:text-5xl text-lg text-center">
             Prepare yourself & lets explore <br></br>the beauty of the dream
             world
@@ -352,7 +352,7 @@ const Body = () => {
           <p className="text-lg text-white">
             We have many special offer especially for you
           </p>
-          <button className=" w-fit text-base py-3 px-6 bg-white text-tr-orange rounded-md ">
+          <button className=" w-fit text-base py-3 px-6 bg-white text-[#333333] rounded-md ">
             Get Started
           </button>
         </div>

@@ -3,7 +3,8 @@ import LandingPage from "./components/LandingPgae";
 import Login from "./components/Login";
 import User from "./components/User";
 import About from "./components/About";
-import Pricing from "./components/Pricing";
+import ContactUs from "./components/ContactUs";
+
 import Signup from "./components/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useSelector } from "react-redux";
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <div className="">
       <Routes>
-        {/* unauthorized route */}
+        {/* authorized route */}
         {!isLoggedIn && (
           <>
             <Route path={"/home"} element={<LandingPage />} />
@@ -29,7 +30,7 @@ const App = () => {
           <Route path="/" element={<Navigate to={"/user"} />} />
           <Route path="/user" element={<User />} />
           <Route path="/about" element={<About />} />
-          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Route>
         <Route
           path="*"
