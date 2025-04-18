@@ -8,11 +8,11 @@ const Body = () => {
       <div className="flex justify-between items-center mt-[1rem] px-5 laptop:px-20 laptop:gap-0 gap-5 flex-col laptop:flex-row ">
         <div className="flex flex-col gap-6">
           <p className="laptop:text-[3.25rem] text-4xl font-semibold laptop:leading-[3.9rem]">
-            Lets Explore <br></br>The Beauty Of <br></br> Dream world
+            Lets Explore <br className="hidden mobileMax:block" ></br>The Beauty Of <br className="hidden mobileMax:block"></br> Dream world
           </p>
           <p className="text-tr-grayWhite laptop:text-lg font-normal pl-1">
-            We always out customer happy by providing as many chises <br></br>
-            as possible we always our customer happy by providing as <br></br>
+            We always out customer happy by providing as many chises <br className="hidden mobileMax:block" ></br>
+            as possible we always our customer happy by providing as <br className="hidden mobileMax:block"></br>
             many possible by providing as many chises as
           </p>
           <section

@@ -21,6 +21,7 @@ export default {
       mobile:'320px',
       mediumScreen:'1300px',
       largerScreen:'1240px',
+      mobileMax:'440px'
     
     }
   },
