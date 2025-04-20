@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import Footer from "./Footer";
 import NavBar2 from "./NavBar2";
+import TourPackage from "./TourPackage"
 import { tourPackages } from "../../utils/constants";
+
 import toast, { Toaster } from "react-hot-toast";
-import TourPackage from "./tourPackage";
 
 const User = () => {
   useEffect(() => {

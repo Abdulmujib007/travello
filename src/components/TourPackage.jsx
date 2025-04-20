@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
 const TourPackage = ({id,img,date,people,about,title}) => {
   return (
     <div className="flex flex-col gap-4">
