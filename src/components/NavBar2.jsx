@@ -49,7 +49,7 @@ const NavBar2 = () => {
         <Link
           to={"/user"}
           className={`${
-            pathname === "/user" ? "text-tr-orange" : "text-black"
+            pathname === "/user" || pathname.includes('/tourPackage/') ? "text-tr-orange" : "text-black"
           } hover:text-tr-orange w-fit` }
         >
           Services

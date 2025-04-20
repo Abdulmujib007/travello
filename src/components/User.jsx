@@ -1,9 +1,11 @@
-// import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "./Footer";
 import NavBar2 from "./NavBar2";
-// import { useState } from "react";
+// import tourPackage from "./tourPackage";
 import toast, { Toaster } from "react-hot-toast";
+import TourPackage from "./tourPackage";
+import { tourPackages } from "../../utils/constants";
+
 
 const User = () => {
   useEffect(() => {
@@ -16,18 +18,18 @@ const User = () => {
 
   const body = () => {
     return (
-      <div className=" px-5 laptop:px-36 laptop:mt-10 mt-3 mb-4 ">
+      <div className=" px-5 laptop:px-28 laptop:mt-10 mt-3 mb-4 ">
         <p className=" font-semibold laptop:font-extrabold laptop:text-[2rem] font-sans laptop:pb-9 pb-3 ">My Tickets</p>
         <div className="py-5  border-[1px] border-[#EFEFEF] rounded-3xl flex flex-col">
-          <section className=" laptop:mb-10 mb-2 px-3 laptop:px-8 flex gap-10 justify-between text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
-            <p className="laptop:text-xl  laptop:font-semibold text-sm ">Tour Name</p>
-            <div className="flex largerScreen:gap-40 laptop:gap-16 gap-8 ">
-              <p className="laptop:text-xl laptop:font-semibold text-sm">Payment Method</p>
+          <section className=" laptop:mb-10 mb-2 px-3 laptop:px-8 flex mobileMax:gap-10 gap-28 mobileMax:justify-between justify-start   text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
+            <p className="laptop:text-xl  laptop:font-semibold mobileMax:text-sm text-xs ">Tour Name</p>
+            <div className="flex largerScreen:gap-40 laptop:gap-16 mobileMax:gap-8 gap-16 ">
+              <p className="laptop:text-xl laptop:font-semibold hidden mobileMax:block text-sm">Payment Method</p>
               <p className="laptop:text-xl laptop:font-semibold text-sm">Price</p>
               <p className="laptop:text-xl laptop:font-semibold text-sm">Status</p>
             </div>
           </section>
-          <section className="px-3 laptop:px-8 flex  w-full justify-between text-tr-white pb-5  border-b-[1px] border-[#EFEFEF] laptop:pt-5 pt-1 items-center  ">
+          <section className="px-3 laptop:px-8 flex  w-full mobileMax:justify-between justify-start gap-10 mobileMax:gap-0 text-tr-white pb-5  border-b-[1px] border-[#EFEFEF] laptop:pt-5 pt-1 items-center  ">
             <div className=" flex gap-2 laptop:gap-5 largerScreen:flex-row flex-col ">
               <img className="laptop:h-[6.5rem] w-32 laptop:w-fit" src="/img/Rectangle 39.png" alt="" />
               <div className="flex flex-col laptop:gap-3 gap-1">
@@ -46,10 +48,10 @@ const User = () => {
                 </p>
               </div>
             </div>
-            <div className="flex  items-center  gap-5 largerScreen:gap-28 laptop:gap-4">
-              <p className="flex laptop:flex-row flex-col gap-1 laptop:gap-2 items-center font-semibold laptop:text-base text-xs laptop:mr-24 mr-10 ">
+            <div className="flex  items-center  gap-16 largerScreen:gap-28 mobileMax:gap-4">
+              <p className="hidden mobileMax:flex laptop:flex-row flex-col gap-1 laptop:gap-2 items-center font-semibold laptop:text-base text-xs laptop:mr-24 mr-10 ">
                 <img className="laptop:w-fit w-5" src="/img/PayPal.png" alt="" />
-                <span className="text-tr-white font-normal">Paypal</span>
+                <span className="text-tr-white font-normal ">Paypal</span>
               </p>
               <p className="text-tr-white laptop:text-base text-xs">$86.00</p>
               <p className="flex laptop:gap-2 gap-1 items-center  laptop:flex-row flex-col ">
@@ -62,7 +64,7 @@ const User = () => {
               </p>
             </div>
           </section>
-          <section className=" px-3 laptop:px-8 flex justify-between text-tr-white   laptop:pt-5 pt-3 items-center">
+          <section className=" px-3 laptop:px-8 flex justify-start mobileMax:justify-between gap-10 mobileMax:gap-0 text-tr-white   laptop:pt-5 pt-3 items-center">
             <div className="flex laptop:gap-5 gap-2 largerScreen:flex-row flex-col  ">
               <img className="laptop:h-[6.5rem] laptop:w-fit w-32 " src="/img/Rectangle 39.png" alt="" />
               <div className="flex flex-col laptop:gap-3 gap-1">
@@ -81,8 +83,8 @@ const User = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center  largerScreen:gap-[8.5rem] laptop:gap-10 gap-10">
-              <p className="flex laptop:gap-2 gap-1 flex-col laptop:flex-row items-center laptop:font-semibold laptop:text-base text-xs laptop:mr-10 mr-3 ">
+            <div className="flex items-center   largerScreen:gap-[8.5rem] mobileMax:gap-10 gap-20">
+              <p className="hidden mobileMax:flex laptop:gap-2 gap-1 flex-col laptop:flex-row items-center laptop:font-semibold laptop:text-base text-xs laptop:mr-10 mr-3 ">
                 <img className="laptop:w-fit w-5" src="/img/Visa.png" alt="" />
                 <span className="text-tr-white largerScreen:font-semibold font-normal ">Credit Card</span>
               </p>
@@ -115,6 +117,13 @@ const User = () => {
             />
           </div>
         </div>
+        <div className="mt-14 mb-20 laptop:mb-40 grid miniLaptop:grid-cols-4  laptop:gap-10 miniLaptop:gap-5 laptop:grid-cols-2 gap-7 grid-flow-row">
+          {
+            tourPackages.map(({about,date,id,img,people,title}) => (
+                <TourPackage about={about} date={date} id={id} img={img} people={people} title={title} key={id} />
+            ))
+          }
+        </div>
       </div>
     );
   };
@@ -123,6 +132,7 @@ const User = () => {
       <NavBar2 />
       <main className="flex flex-col flex-grow overflow-auto ">
         {body()}
+        
         <Footer />
       </main>
       <Toaster

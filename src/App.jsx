@@ -8,6 +8,7 @@ import ContactUs from "./components/ContactUs";
 import Signup from "./components/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useSelector } from "react-redux";
+import TourPackageDetails from "./components/TourPackageDetails";
 const App = () => {
   const { isLoggedIn } = useSelector((state) => state.appAuth);
   console.log(isLoggedIn);
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/user" element={<User />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/tourPackage/:id" element={<TourPackageDetails/>} />
         </Route>
         <Route
           path="*"

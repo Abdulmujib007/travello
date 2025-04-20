@@ -4,7 +4,7 @@ const Footer = () => {
       <header className="font-normal laptop:font-medium text-base italic text-tr-orange">
         TRAVELLO
       </header>
-      <main className=" border-y-[1px] border-y-gray-500 my-4 laptop:my-8 py-4 laptop:py-8 text-white flex flex-col laptop:flex-row justify-between   ">
+      <main className=" border-y-[1px] border-y-gray-500 my-4 laptop:my-8 py-4 laptop:py-8 text-white flex flex-col laptop:flex-row justify-between gap-8 laptop:gap-0  ">
         <section className="">
           <h1 className="font-sans font-semibold laptop:font-bold text-xl">Services</h1>
           <div className="flex flex-col font-thin gap-1 text-sm mt-2">

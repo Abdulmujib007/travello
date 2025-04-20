@@ -21,7 +21,9 @@ export default {
       mobile:'320px',
       mediumScreen:'1300px',
       largerScreen:'1240px',
-      mobileMax:'440px'
+      mobileMax:'440px',
+      miniLaptop:'1420px',
+      aboutResponsive:'580px'
     
     }
   },
