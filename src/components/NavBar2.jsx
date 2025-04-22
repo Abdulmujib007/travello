@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useClickAway } from "use-click-away";
+
 import { useDispatch } from "react-redux";
 import { logout } from "../../helper/appSlice";
 const NavBar2 = () => {
@@ -7,8 +9,17 @@ const NavBar2 = () => {
   const [showMenu,setShowMenu] = useState(false)
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const {pathname} = useLocation();
+  const userProfileWrapperRef = useRef(null)
+  const imgRef = useRef(null)
+  console.log({userProfileWrapperRef})
   const toggleProfileVisibility = () => {
-    setShow(!show)
+   if(!show && userProfileWrapperRef.current === null){
+    setShow(true)
+   } else if (show && userProfileWrapperRef.current){
+    setShow(false)
+   }
+
     setShowMenu(false)
   }
 
@@ -22,6 +33,13 @@ const NavBar2 = () => {
     localStorage.setItem("first-loaded", JSON.stringify(false));
     navigate("/home");
   };
+  useClickAway(userProfileWrapperRef, (e) => {
+      if(imgRef.current && imgRef.current.contains(e.target) ){
+        return;
+      } 
+    setShow(false)
+  })
+  
 
   const style = {
     boxShadow: "0px 6px 10px 0px #57575726",
@@ -69,17 +87,21 @@ const NavBar2 = () => {
             </div>
 
             <section className="flex  items-center">
-            
               <img
+              ref={imgRef}
                 onClick={toggleProfileVisibility}
-                className="h-10"
-                src="/img/Ellipse 8.png"
+                className="h-10 rounded-full"
+                src="/img/me.jpeg"
                 alt=""
               />
             </section>
             <section className="block laptop:hidden">
               {!showMenu && (
-                <img className="w-7" onClick={toggleMenuVisibility} src="/img/menu-fill.svg" />
+                <img
+                  className="w-7"
+                  onClick={toggleMenuVisibility}
+                  src="/img/menu-fill.svg"
+                />
               )}
               {showMenu && (
                 <img
@@ -99,13 +121,17 @@ const NavBar2 = () => {
         {show && (
           <section className="w-full  flex justify-end laptop:pr-20">
             <div
+              ref={userProfileWrapperRef}
               style={style}
               className=" bg-white  flex flex-col items-start justify-center    border-[1px] border-[#EFEFEF]   text-tr-white rounded-b-3xl w-fit "
             >
-              <section className="w-full flex pb-3 border-b-[1px] border-b-[#EFEFEF] items-center pr-7  laptop:pr-14 laptop:pl-[14px] pl-2 pt-2 laptop:pt-[14px] gap-3">
+              <Link
+                to={`${pathname === "/user" ? "/" : "/user"}`}
+                className="w-full flex pb-3 border-b-[1px] border-b-[#EFEFEF] items-center pr-7  laptop:pr-14 laptop:pl-[14px] pl-2 pt-2 laptop:pt-[14px] gap-3"
+              >
                 <img className="h-5" src="/img/icon_ticket.png" alt="" />
                 <p className="laptop:text-lg">My Tickets</p>
-              </section>
+              </Link>
               <button
                 onClick={handleLogout}
                 className="flex px-2 laptop:px-[14px] py-2 laptop:py-[14px] gap-3 "

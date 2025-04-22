@@ -262,11 +262,11 @@ const Body = () => {
         <p className="text-center font-bold text-5xl pt-10">
           What Our Client Say{" "}
         </p>
-        <p className="text-center text-lg pt-6">
+        <p className="text-center text-sm laptop:text-lg pt-6">
           Creating a visual identity for your company, and an <br></br> overall
           brand
         </p>
-        <div className="px-20 py-10 flex justify-center items-center  gap-5 flex-col laptop:flex-row">
+        <div className="laptop:px-20 px-5 py-10 flex justify-center items-center  gap-5 flex-col laptop:flex-row">
           <section className=" relative p-8  border-2 border-tr-gray flex  flex-col gap-8   w-fit ">
             <p>
               A customer testimonial that highlights <br></br> features and
@@ -349,7 +349,7 @@ const Body = () => {
             Prepare yourself & lets explore <br></br>the beauty of the dream
             world
           </p>
-          <p className="text-lg text-white">
+          <p className="laptop:text-lg text-sm text-white">
             We have many special offer especially for you
           </p>
           <button className=" w-fit text-base py-3 px-6 bg-white text-[#333333] rounded-md ">

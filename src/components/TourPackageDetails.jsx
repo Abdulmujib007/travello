@@ -5,14 +5,14 @@ import Testimonial from "./Testimonial";
 import { useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import { useState } from "react";
-// import "react-calendar/dist/Calendar.css";
+import "react-calendar/dist/Calendar.css";
 
 function TourPackageDetails() {
   const [date,setDate] = useState(new Date())
   const navigate = useNavigate()
   const { id } = useParams();
   const packageDetail = packageDetails.find((item) => item.id === Number(id));
-  console.log({date});
+  console.log(date);
   return (
     <Layout>
       <div
@@ -25,14 +25,10 @@ function TourPackageDetails() {
       <div className=" aboutResponsive:mx-20 miniLaptop:mx-40 mx-[1rem] ">
         <section className="flex flex-col largerScreen:flex-row gap-10 w-full">
           <div className="miniLaptop:w-[50%]  w-[100%] largerScreen:w-[40%] flex flex-col justify-center gap-5">
-            <img
-              className=""
-              src={packageDetail.tourImage.img1}
-              alt=""
-            />
+            <img className="" src={packageDetail.tourImage.img1} alt="" />
             <div className="flex justify-between">
               <img
-                className=" w-[32%] "
+                className=" w-[32%] largerScreen:h-[9rem] "
                 src={packageDetail.tourImage.img2}
                 alt=""
               />
@@ -48,15 +44,15 @@ function TourPackageDetails() {
               />
             </div>
           </div>
-          <div className=" largerScreen:w-[50%] w-[100%] flex flex-col gap-2">
-            <p className="font-extrabold mobileMax:text-5xl text-3xl ">{packageDetail.title}</p>
-            <p className="font-semibold text-2xl">
+          <div className=" largerScreen:w-[50%] w-[100%] flex flex-col gap-1">
+            <p className="font-extrabold text-4xl ">{packageDetail.title}</p>
+            <p className="font-semibold text-xl">
               from{" "}
-              <span className="font-extrabold text-3xl text-tr-orange">
+              <span className="font-extrabold text-xl text-tr-orange">
                 34 $
               </span>{" "}
             </p>
-            <p className="text-[#333333] text-lg">
+            <p className="text-[#333333]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -66,15 +62,16 @@ function TourPackageDetails() {
               <span className="font-semibold text-lg  text-[#333333]">
                 Select a date
               </span>
-              <Calendar
-                value={date}
-                onChange={setDate}
-                className="flex flex-col  border-[1px] border-[#33333333] p-3 gap-3 text-sm w-fit"
-                calendarType="gregory"
-                tileClassName="flex w-fit  mx-0 px-0"
-              />
+              <div className="h-[18rem] w-[15.5rem]">
+                <Calendar
+                  value={date}
+                  onChange={setDate}
+                  className="flex gap-0 flex-col border-[1px] border-[#33333333]  text-sm w-fit"
+                  calendarType="gregory"
+                />
+              </div>
             </div>
-            <div>
+            <div className="mt-1">
               <p className="font-semibold text-lg text-[#333333] ">Time</p>
               <main className="flex pl-6 pr-5 py-3 border-[1px] border-[#33333333] rounded-lg w-fit gap-3">
                 <input
@@ -173,12 +170,28 @@ function TourPackageDetails() {
             </div>
           </div>
           <div className="flex flex-col laptop:flex-row w-full gap-5 ">
-            <img className=" w-[100%] laptop:w-[45%]" src={packageDetail.gallery.img1} alt="" />
+            <img
+              className=" w-[100%] laptop:w-[45%]"
+              src={packageDetail.gallery.img1}
+              alt=""
+            />
             <div className="w-[100%] laptop:w-[25%] flex justify-between flex-row laptop:flex-col laptop:gap-0 gap-3  ">
-              <img className="laptop:w-full w-[49%]" src={packageDetail.gallery.img2} alt="" />
-              <img className="laptop:w-full w-[49%]" src={packageDetail.gallery.img3} alt="" />
+              <img
+                className="laptop:w-full w-[49%]"
+                src={packageDetail.gallery.img2}
+                alt=""
+              />
+              <img
+                className="laptop:w-full w-[49%]"
+                src={packageDetail.gallery.img3}
+                alt=""
+              />
             </div>
-            <img className="laptop:w-[25%] w-[100%] " src={packageDetail.gallery.img4} alt="" />
+            <img
+              className="laptop:w-[25%] w-[100%] "
+              src={packageDetail.gallery.img4}
+              alt=""
+            />
           </div>
         </section>
       </div>
