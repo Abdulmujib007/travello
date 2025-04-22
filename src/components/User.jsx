@@ -21,8 +21,9 @@ const User = () => {
         <p className=" font-semibold laptop:font-extrabold laptop:text-[2rem] font-sans laptop:pb-9 pb-3 ">
           My Tickets
         </p>
-        <div className="py-5  border-[1px] border-[#EFEFEF] rounded-3xl flex flex-col">
-          <section className=" laptop:mb-10 mb-2 px-3 laptop:px-8 flex mobileMax:gap-10 gap-28 mobileMax:justify-between justify-start   text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
+        <div className="flex items-center justify-center">
+          <img className="" src="/img/Frame 97.png" alt="" />
+          {/* <section className=" laptop:mb-10 mb-2 px-3 laptop:px-8 flex mobileMax:gap-10 gap-28 mobileMax:justify-between justify-start   text-tr-white pb-5 border-b-[1px] border-[#EFEFEF]">
             <p className="laptop:text-xl  laptop:font-semibold mobileMax:text-sm text-xs ">
               Tour Name
             </p>
@@ -37,8 +38,8 @@ const User = () => {
                 Status
               </p>
             </div>
-          </section>
-          <section className="px-3 laptop:px-8 flex  w-full mobileMax:justify-between justify-start gap-10 mobileMax:gap-0 text-tr-white pb-5  border-b-[1px] border-[#EFEFEF] laptop:pt-5 pt-1 items-center  ">
+          </section> */}
+          {/* <section className="px-3 laptop:px-8 flex  w-full mobileMax:justify-between justify-start gap-10 mobileMax:gap-0 text-tr-white pb-5  border-b-[1px] border-[#EFEFEF] laptop:pt-5 pt-1 items-center  ">
             <div className=" flex gap-2 laptop:gap-5 largerScreen:flex-row flex-col ">
               <img
                 className="laptop:h-[6.5rem] w-32 laptop:w-fit"
@@ -90,8 +91,8 @@ const User = () => {
                 <span className="text-xs laptop:text-base">Upcoming</span>
               </p>
             </div>
-          </section>
-          <section className=" px-3 laptop:px-8 flex justify-start mobileMax:justify-between gap-10 mobileMax:gap-0 text-tr-white   laptop:pt-5 pt-3 items-center">
+          </section> */}
+          {/* <section className=" px-3 laptop:px-8 flex justify-start mobileMax:justify-between gap-10 mobileMax:gap-0 text-tr-white   laptop:pt-5 pt-3 items-center">
             <div className="flex laptop:gap-5 gap-2 largerScreen:flex-row flex-col  ">
               <img
                 className="laptop:h-[6.5rem] laptop:w-fit w-32 "
@@ -141,7 +142,7 @@ const User = () => {
                 <span className="text-xs laptop:text-base">Ended</span>
               </p>
             </div>
-          </section>
+          </section> */}
         </div>
         <div className="laptop:pt-28 pt-8 flex justify-between items-center">
           <p className=" font-bold laptop:font-extrabold text-2xl  laptop:text-4xl font-sans text-tr-white">

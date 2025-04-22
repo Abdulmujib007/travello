@@ -85,7 +85,7 @@ function TourPackageDetails() {
                 <img className="w-4" src="/img/Group.svg" alt="" />
               </main>
             </div>
-            <button className="bg-tr-orange rounded-full w-fit text-white py-[10px] px-[92px]">
+            <button className="bg-tr-orange rounded-full w-fit text-white py-[10px] px-[5.5rem]  ">
               Buy Now
             </button>
           </div>
